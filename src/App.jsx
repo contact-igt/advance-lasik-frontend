@@ -29,6 +29,7 @@ function LandingContent({ heroNameRef, stickyNameRef, handleFormSubmit, scrollTo
           <div className="w-full lg:w-8/12 py-6 lg:py-16 space-y-12 md:space-y-16 lg:space-y-24">
             <DoctorProfile onBookConsultation={() => setIsModalOpen(true)} />
             <CataractInfo />
+            <GoogleReviews onBookAppointment={() => setIsModalOpen(true)} />
             <SurgeryAccordions />
             <HowIsItUnique />
             <CandidatesSection />
@@ -37,10 +38,9 @@ function LandingContent({ heroNameRef, stickyNameRef, handleFormSubmit, scrollTo
               onHeroEnquiry={() => setIsModalOpen(true)}
               onStickyBook={() => setIsModalOpen(true)}
             />
-            <GoogleReviews onBookAppointment={()=>setIsModalOpen(true)} />
             <FaqAccordions />
           </div>
-         <aside className="hidden lg:block lg:w-4/12 sticky top-24 h-fit pt-14">
+          <aside className="hidden lg:block lg:w-4/12 sticky top-24 h-fit pt-14">
             <StickyForm nameRef={stickyNameRef} onSubmit={handleFormSubmit} />
           </aside>
         </div>
